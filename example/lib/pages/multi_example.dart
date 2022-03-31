@@ -68,6 +68,7 @@ class _TableMultiExampleState extends State<TableMultiExample> {
         children: [
           TableCalendar<Event>(
             firstDay: kFirstDay,
+            dropDownColor: Colors.white,
             lastDay: kLastDay,
             focusedDay: _focusedDay,
             calendarFormat: _calendarFormat,

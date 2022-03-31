@@ -201,6 +201,8 @@ class TableCalendar<T> extends StatefulWidget {
   /// Called when the calendar is created. Exposes its PageController.
   final void Function(PageController pageController)? onCalendarCreated;
 
+  final Color dropDownColor;
+
   /// Creates a `TableCalendar` widget.
   TableCalendar({
     Key? key,
@@ -218,6 +220,7 @@ class TableCalendar<T> extends StatefulWidget {
       CalendarFormat.twoWeeks: '2 weeks',
       CalendarFormat.week: 'Week',
     },
+    required this.dropDownColor,
     this.headerVisible = true,
     this.daysOfWeekVisible = true,
     this.pageJumpingEnabled = false,
@@ -461,6 +464,7 @@ class _TableCalendarState<T> extends State<TableCalendar<T>> {
                 availableCalendarFormats: widget.availableCalendarFormats,
                 calendarFormat: widget.calendarFormat,
                 locale: widget.locale,
+                dropDownColor: widget.dropDownColor,
                 onFormatButtonTap: (format) {
                   assert(
                     widget.onFormatChanged != null,

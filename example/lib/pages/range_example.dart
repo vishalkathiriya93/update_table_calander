@@ -33,6 +33,7 @@ class _TableRangeExampleState extends State<TableRangeExample> {
         selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
         rangeStartDay: _rangeStart,
         rangeEndDay: _rangeEnd,
+        dropDownColor: Colors.white,
         calendarFormat: _calendarFormat,
         rangeSelectionMode: _rangeSelectionMode,
         onDaySelected: (selectedDay, focusedDay) {

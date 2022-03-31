@@ -21,6 +21,7 @@ class CalendarHeader extends StatelessWidget {
   final ValueChanged<CalendarFormat> onFormatButtonTap;
   final Map<CalendarFormat, String> availableCalendarFormats;
   final DayBuilder? headerTitleBuilder;
+  final Color dropDownColor;
 
   const CalendarHeader({
     Key? key,
@@ -34,6 +35,7 @@ class CalendarHeader extends StatelessWidget {
     required this.onHeaderLongPress,
     required this.onFormatButtonTap,
     required this.availableCalendarFormats,
+    required this.dropDownColor,
     this.headerTitleBuilder,
   }) : super(key: key);
 
@@ -49,7 +51,6 @@ class CalendarHeader extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-
           Expanded(
             child: Row(
               children: [
@@ -82,9 +83,6 @@ class CalendarHeader extends StatelessWidget {
               ],
             ),
           ),
-
-
-
           if (headerStyle.formatButtonVisible &&
               availableCalendarFormats.length > 1)
             Row(
@@ -100,6 +98,7 @@ class CalendarHeader extends StatelessWidget {
                     decoration: headerStyle.formatButtonDecoration,
                     padding: headerStyle.formatButtonPadding,
                     textStyle: headerStyle.formatButtonTextStyle,
+                    dropDownColor: dropDownColor,
                   ),
                 ),
                 SizedBox(
@@ -107,7 +106,6 @@ class CalendarHeader extends StatelessWidget {
                 )
               ],
             ),
-
         ],
       ),
     );

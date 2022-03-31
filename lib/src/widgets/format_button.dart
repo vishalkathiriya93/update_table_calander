@@ -9,6 +9,7 @@ class FormatButton extends StatefulWidget {
   final Decoration decoration;
   final EdgeInsets padding;
   bool showsNextFormat;
+  final Color dropDownColor;
 
   String newValue = "Week";
   final Map<CalendarFormat, String> availableCalendarFormats;
@@ -22,6 +23,7 @@ class FormatButton extends StatefulWidget {
     required this.padding,
     this.newValue = "Week",
     this.showsNextFormat = true,
+    required this.dropDownColor,
     required this.availableCalendarFormats,
   }) : super(key: key);
 
@@ -45,6 +47,7 @@ class _FormatButtonState extends State<FormatButton> {
       child: Container(
         child: DropdownButton<String>(
           value: getCurrent(),
+          dropdownColor: widget.dropDownColor,
           elevation: 0,
           style: const TextStyle(color: Colors.black),
           underline: Container(

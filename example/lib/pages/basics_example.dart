@@ -26,6 +26,7 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
         firstDay: kFirstDay,
         lastDay: kLastDay,
         focusedDay: _focusedDay,
+        dropDownColor: Colors.white,
         calendarFormat: _calendarFormat,
         selectedDayPredicate: (day) {
           return isSameDay(_selectedDay, day);
@@ -46,9 +47,7 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
             });
           }
         },
-        headerStyle: HeaderStyle(
-          leftChevronPadding: EdgeInsets.all(0)
-        ),
+        headerStyle: HeaderStyle(leftChevronPadding: EdgeInsets.all(0)),
         onPageChanged: (focusedDay) {
           // No need to call `setState()` here
           _focusedDay = focusedDay;

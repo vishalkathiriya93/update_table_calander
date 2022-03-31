@@ -100,6 +100,7 @@ class _TableEventsExampleState extends State<TableEventsExample> {
             calendarFormat: _calendarFormat,
             rangeSelectionMode: _rangeSelectionMode,
             eventLoader: _getEventsForDay,
+            dropDownColor: Colors.white,
             startingDayOfWeek: StartingDayOfWeek.monday,
             calendarStyle: CalendarStyle(
               // Use `CalendarStyle` to customize the UI
